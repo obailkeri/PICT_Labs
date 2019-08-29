@@ -1,0 +1,171 @@
+body {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+}
+
+.parallax { 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: white;
+}
+
+#head-div {
+	background-color: yellow;
+	width: 18%;
+	height: 110px;
+	border-radius: 25%;
+	border: 2px solid black;
+}
+
+#heading {
+	width: 150px;
+	height: 90px;
+	padding-top: 10px;
+	transition-duration: 0.5s;
+}
+
+#heading:hover {
+	width: 180px;
+	transition-duration: 0.5s;
+}
+
+#motto-div {
+	background-color: yellow;
+	width: 30%;
+	height: 40px;
+	border-radius: 50%;
+}
+
+#motto {
+	font-family: URW Chancery L, cursive;
+	font-size: 23px;
+	padding-top: 5px;
+	transition-duration: 0.5s;
+}
+
+#motto:hover {
+	color: red;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs {
+	width: 20%;
+	padding-top: 15px;
+	background-color: yellow;
+	float: left;
+	height: 40px;
+	border-radius: 20%;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs:hover {
+	color: white;
+	background-color: black;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs a:visited {
+	color: red;
+}
+
+.nav-tabs a {
+	color: red;
+	font-size: 25px;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs a:hover {
+	color: white;
+	transition-duration: 0.5s;
+}
+
+.dropdown-content {
+  	display: none;
+  	background-color: white;
+  	width: 20%;
+  	position: absolute;
+  	z-index: 1;
+}
+
+.dropdown-content .alt {
+	background-color: lightgrey;
+}
+
+.dropdown-content a {
+  	color: red;
+  	padding: 10px 14px;
+  	text-decoration: none;
+  	display: block;
+}
+
+.dropdown-content a:hover {
+  	background-color: yellow;
+  	color: black;
+}
+.dropdown:hover .dropdown-content {
+  	display: block;
+}
+
+.lang-title {
+	font-size: 25px;
+	padding : 0;
+	transition-duration: 0.4s;
+}
+
+.lang-title:hover {
+	font-size: 25px;
+	padding : 0;
+	color: red;
+	transition-duration: 0.4s;
+}
+
+.lang-pic {
+	width: 250px;
+	height: 180px;
+	border-radius: 35%;
+	border-width: 5px;
+	border-color: white;
+	transition-duration: 0.4s;
+}
+
+.lang-pic:hover {
+	width: 250px;
+	height: 180px;
+	border-radius: 50%;
+	transition-duration: 0.4s;
+}
+
+.lang-div {
+	background: black;
+	opacity: 0.8;
+	width: 46%;
+	height: 400px;
+	margin: 2%;
+	float: left;
+	border-radius: 2%;
+	transition-duration: 0.4s;
+}
+
+.lang-div:hover {
+	background: yellow;
+	opacity: 1.0;
+	border-radius: 15%;
+	transition-duration: 0.4s;
+}
+
+.lang-div:hover p {
+	color: black;
+	font-size: 18px;
+	transition-duration: 0.4s;
+}

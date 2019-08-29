@@ -1,0 +1,167 @@
+/*CSS for programming language pages*/
+
+body {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+#head-div {
+	background-color: yellow;
+	width: 18%;
+	height: 110px;
+	border-radius: 25%;
+	border: 2px solid black;
+}
+
+#heading {
+	width: 150px;
+	height: 90px;
+	padding-top: 10px;
+	transition-duration: 0.5s;
+}
+
+#heading:hover {
+	width: 180px;
+	transition-duration: 0.5s;
+}
+
+#motto-div {
+	background-color: yellow;
+	width: 30%;
+	height: 40px;
+	border-radius: 50%;
+}
+
+#motto {
+	font-family: URW Chancery L, cursive;
+	font-size: 23px;
+	padding-top: 5px;
+	transition-duration: 0.5s;
+}
+
+#motto:hover {
+	color: red;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs {
+	width: 20%;
+	padding-top: 15px;
+	background-color: yellow;
+	float: left;
+	height: 40px;
+	border-radius: 20%;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs:hover {
+	color: white;
+	background-color: black;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs a:visited {
+	color: red;
+}
+
+.nav-tabs a {
+	color: red;
+	font-size: 25px;
+	transition-duration: 0.5s;
+}
+
+.nav-tabs a:hover {
+	color: white;
+	transition-duration: 0.5s;
+}
+
+.lang-title {
+	font-size: 25px;
+	padding : 0;
+}
+
+.dropdown-content {
+  	display: none;
+  	background-color: white;
+  	width: 20%;
+  	position: absolute;
+  	z-index: 1;
+}
+
+.dropdown-content .alt {
+	background-color: lightgrey;
+}
+
+.dropdown-content a {
+  	color: red;
+  	padding: 10px 14px;
+  	text-decoration: none;
+  	display: block;
+}
+
+.dropdown-content a:hover {
+  	background-color: yellow;
+  	color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  	display: block;
+}
+
+.content {
+	padding-top: 20px;
+	border-radius: 50%;
+	border: 2px solid black;
+	background: rgb(255,255,0);
+	width: 30%;
+	height: 200px;
+	float: left;
+	transition-duration: 0.5s;
+}
+
+.content ol {
+	color: red;
+}
+
+ol li {
+	list-style-position:inside
+}
+
+.content a {
+	color: red;
+}
+
+.content a:hover {
+	color:white;
+}
+
+.content:hover {
+	background: black;
+	border: 2px yellow solid;
+	transition-duration: 0.5s;
+}
+
+.content:hover h4 {
+	color: white;
+}
+
+#content1 {
+	margin-left: 14%;
+	margin-right: 4%;
+}
+
+#content2 {
+	margin-left: 4%;
+	margin-right: 14%;
+}
+
+footer {
+	margin-top: 200px;
+	margin-bottom: 25px;
+}
