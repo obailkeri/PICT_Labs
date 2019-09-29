@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Free Coding</title>
+	<link rel="icon" type="image/x-icon" href="icon.png">
+
+	<style type="text/css">
+		body {
+			background: url(bg1.jpg);
+			font-family: fantasy;
+			color: black;
+			font-size: 22px;
+		}
+
+		header, footer {
+			text-align: center;
+		}
+
+		.container {
+			background: url(bg1.jpg);
+			margin-left: 5%;
+			margin-right: 5%;
+			border: 1px black solid;
+			border-radius: 5%;
+			padding-left: 3%;
+			padding-right: 3%; 
+		}
+
+		input {
+			width: 20%;
+			height: 20px;
+			border-radius: 3%;
+			text-align: justify;
+			font-size: 18px;
+		}
+
+		.radio-opt {
+			width: 10%;
+			float: left;
+		}
+
+		select.dropdown {
+			width: 20%;
+			height: 30px;
+		}
+
+		textarea {
+			width: 50%;
+			height: 80px;
+		}
+
+		#address, #lang {
+			width: 90%;
+		}
+
+		.checkbox1 {
+			width: 30%;
+			float: left;
+			height: 40px;
+		}
+
+		input.l-checkbox {
+			width: 20px;
+			height: 20px;
+		}
+
+		button {
+			width: 100px;
+			height: 40px;
+		}
+
+		.clear {
+			color: black;
+			background-color: red;
+			margin-left: 12%;
+		}
+
+		.submit {
+			color: black;
+			background-color: green;
+			margin-left: 4%;
+		}
+	</style>
+</head>
+
+<!confirm password, text area, dropdown, radio, checkbox, calender, reset/clear button, submit button, optgroup, data-list, placeholder.>
+
+<body>
+	<header>
+		<div id="head-div">
+			<h1>FORM</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="signup">
+			<h2><u>Sign Up  </u></h2>
+			<form name="myform" onsubmit="validateForm()">
+				Name :
+			  	<input type="text" name="name" id="name" onblur="nameValidate()"><br><br>
+
+			  	<div class="radio-opt">Gender :</div>
+				<div class="radio-opt"><input class="radio-opt" type="radio" name="gender" value="male">Male</div>
+  				<div class="radio-opt"><input class="radio-opt" type="radio" name="gender" value="female">Female</div>
+ 				<div class="radio-opt"><input class="radio-opt" type="radio" name="gender" value="other">Other</div><br><br>
+
+				Date Of Birth : 
+				<input type="date" name="bday" onblur="bdayValidate()"><br><br>
+
+				Contact No. :
+				<input type="tel" name="mobile" pattern="[0-9]{10}" onblur="phValidate()"><br><br>
+
+			  	E-Mail Id :
+			  	<input type="email" name="email" placeholder="abc@xyz.com" onblur="emailValidate()"><br><br>
+
+			  	UserName :
+			  	<input type="text" name="uname" placeholder="abc123" id="uname" onblur="usernameValidate()"><br><br>
+
+			  	Password :
+			  	<input type="password" name="pwd" id="pw1"><label id="pv" onblur="pwValidate()"></label><br><br>
+
+			  	Confirm Password :
+			  	<input type="password" name="cpwd" id="pw2" oninput="pwValidate()"><br><br>
+
+			  	Occupation :
+			  	<input list="occupation">
+			  	<datalist id="occupation">
+			  		<option value="Student">
+			  		<option value="Service">
+			  		<option value="Business">
+			  		<option value="Housewife">
+			  		<option value="Other">
+			  	</datalist><br><br>
+
+			  	<fieldset id="address">
+			  		<legend>Address</legend><br>
+			  		Address Line 1 :
+			  		<input type="text" name="ad1" placeholder="Flat No. / Street"><br><br>
+
+			  		Address Line 2 :
+			  		<input type="text" name="ad2" placeholder="Area / City / Pincode"><br><br>
+			  	</fieldset><br>
+
+			  	<fieldset id="lang">
+			  		<legend>Interested Programming Languages</legend><br>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="c">C Language</div>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="cpp">C++</div>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="java">Java</div>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="ptyhon">Python</div>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="html">HTML</div>
+			  		<div class="checkbox1"><input class="l-checkbox" type="checkbox" name="proglang" value="css">CSS</div>
+			  	</fieldset><br>
+
+			  	Your Coding Level :
+		  		<select class="dropdown" name="level">
+		  			<option value="dd1">Completely New</option>
+					<option value="dd2">Have Some Knowledge</option>
+					<option value="dd3">Advanced Coder</option>
+					<option value="dd4">Expert in Coding</option>
+				</select><br><br>
+
+			  	Comment :<br>
+			  	<textarea value="comment"></textarea><br><br>
+
+			  	<button class="clear" type="reset" value="CLEAR">CLEAR</button>
+			  	<button class="submit" type="submit">SUBMIT</button><br><br>
+			</form>
+		</div>
+	</div>
+
+	<footer><br><br>
+		&copy; Copyright
+	</footer>
+
+
+	<script>
+		function validateForm() {  
+			var name=document.forms["myform"]["name"].value;
+			var bday=document.forms["myform"]["bday"].value;
+			var uname=document.forms["myform"]["uname"].value;
+			var email=document.forms["myform"]["email"].value;
+			var password=document.forms["myform"]["pwd"].value;
+			var cpassword=document.forms["myform"]["cpwd"].value;
+			var dob=document.forms["myform"]["bday"];
+			var flag = true;
+			 
+			if (name==null || name=="") { 
+				alert("Please Fill the form properly..!!");
+			  	flag = false;
+			}
+			else if (bday==null || bday=="") {
+				alert("Please Fill the form properly..!!");
+			  	flag = false;
+			}
+			else if (email==null || email=="") {
+				alert("Please Fill the form properly..!!");
+				flag = false;
+			}
+			else if (uname==null || uname=="") {
+				alert("Please Fill the form properly..!!");
+			  	flag = false;
+			}
+			else if (password.length < 8) {
+				alert("Please Fill the form properly..!!");
+			  	flag = false;
+  			}
+  			else if (cpassword != password) {
+  				alert("Please Fill the form properly..!!");
+			  	flag = false;
+  			}
+
+  			if(flag == true) {
+  				alert("Form Submitted Successfully..!!");
+  				return true;
+  			}
+  			
+  			event.preventDefault();
+		}
+
+		function nameValidate() {
+			var name=document.forms["myform"]["name"].value;
+			var alp=/^[a-zA-Z]/;
+
+			if (!alp.test(name) || name=="") {
+				// document.getElementById("w1").innerHTML = "Invalid Name!";
+  				// document.getElementById("w1").style.color = "red";
+			  	alert("Enter VALID Name..!!");
+			  	document.forms["myform"]["name"].value = "";
+			}
+		}
+
+		function bdayValidate() {
+			var bday=document.forms["myform"]["bday"].value;
+
+			if(bday=="") {
+				alert("Enter Birth Date..!!");
+			}
+		}
+
+		function emailValidate() {
+			var email=document.forms["myform"]["email"].value;
+			var vld = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			if(email == "" || !vld.test(email)) {
+		        alert("Enter Valid Email..!!");
+		        document.forms["myform"]["email"].value = "";
+    		}
+		}
+
+		function phValidate()
+		{
+		    var phone=document.forms["myform"]["mobile"].value;
+		    var val=/^\d{10}$/;
+
+		    if(phone == "" || !(phone.match(val))) {
+		        alert("Enter Valid Mobile Number..!!");
+		        document.forms["myform"]["mobile"].value = "";
+		    }
+		}
+
+		function genderValidate() {
+			var radio_option = document.getElementsByName("gender")
+
+			if(!(radio_option[0].checked  || radio_option[1].checked)) {
+			    alert("Please select Gender..!!");
+			}
+
+		}
+
+		function usernameValidate() {
+		    var userName = document.forms["myform"]["uname"].value;
+		    var vldU = /^[a-z0-9_-]{3,16}$/;
+
+		    if(userName == "" || !vldU.test(userName)) {
+		    	alert("Enter Valid Username..!!");
+		    	document.forms["myform"]["uname"].value = "";
+		    }
+		}
+
+		function pwValidate() {
+            pwd1 = document.forms["myform"]["pwd"].value;
+            pwd2 = document.forms["myform"]["cpwd"].value;
+            if (pwd1 == "" || pwd.length < 8) {
+                alert("Minimum 8 characters..!!");
+                document.forms["myform"]["pwd"].value = "";
+            }
+            if (pwd1 != pwd2 && cpwd != "") {
+                alert("Passwords DO NOT Match..!!");
+                document.forms["myform"]["pwd"].value = "";
+                document.forms["myform"]["cpwd"].value = "";
+            }
+        }
+	</script>  
+
+</body>
+</html>
